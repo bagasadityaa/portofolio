@@ -1,0 +1,365 @@
+@media only screen and (max-width: 420px) {
+  .body {
+    justify-content: center;
+    background-color: #ab9292;
+  }
+  .containerHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 15%;
+  }
+  .containerProfile {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+  }
+  .img {
+    max-width: 103;
+    max-height: 102;
+  }
+  .profile {
+    font-family: Abeezee;
+    text-align: center;
+    color: #fff;
+  }
+  .containerIcon {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25%;
+  }
+  .containerIconInstagram {
+    max-width: 50;
+    max-height: 50;
+  }
+  .iconBoxInstagram {
+    max-width: 50;
+    max-height: 50;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+  }
+  .instagram {
+    max-width: 38;
+    max-height: 39;
+  }
+  .containerIconGithub {
+    margin-top: 10;
+    max-width: 50;
+    max-height: 50;
+  }
+  .iconBoxGithub {
+    max-width: 50;
+    max-height: 50;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+  }
+  .github {
+    max-width: 38;
+    max-height: 39;
+  }
+  .containerMahasiswa {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin-top: 75%;
+  }
+  .mahasiswa {
+    font-family: Abeezee;
+    color: #fff;
+    font-size: 15;
+    max-width: 227;
+  }
+  .boxNavbar {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 340px;
+    max-width: 75%;
+  }
+  .boxPortofolio {
+    min-height: 43;
+  }
+  .containerBoxPortofolio {
+    min-width: 30%;
+  }
+  .portofolio {
+    display: flex;
+  }
+  .iconPortofolio {
+    max-width: 24;
+    max-height: 24;
+    margin-top: 8;
+  }
+  .boxBlog {
+    min-width: 55;
+    min-height: 40;
+  }
+  .blog {
+    display: none;
+  }
+  .iconBlog {
+    width: 24;
+    height: 24;
+  }
+  .containerBox {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    justify-content: center;
+    top: 55%;
+  }
+  .containerContent {
+    margin-top: 35;
+    display: flex;
+  }
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  background-color: #ab9292;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 24;
+}
+.containerHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.containerProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 28px;
+}
+.img {
+  width: 103px;
+  height: 102px;
+}
+.profile {
+  font-family: Abeezee;
+  font-style: normal;
+
+  font-size: 15px;
+  line-height: 18px;
+  color: white;
+  text-align: center;
+  width: 103;
+  height: 18;
+}
+.containerMahasiswa {
+  justify-content: center;
+}
+.mahasiswa {
+  width: 537;
+  font-family: Abeezee;
+  font-style: normal;
+  font-size: 15;
+  text-align: center;
+  color: #fff;
+  margin-left: 30;
+  margin-right: 30;
+}
+.containerIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.containerIconInstagram {
+  width: 50;
+  height: 50;
+  margin-bottom: 30;
+}
+.iconBoxInstagram {
+  position: absolute;
+  width: 50;
+  height: 50;
+  background: #d9d9d9;
+  border-radius: 20px;
+}
+.instagram {
+  position: absolute;
+  width: 38;
+  height: 39;
+  left: 6;
+  top: 6;
+}
+.containerIconGithub {
+  width: 50;
+  height: 50;
+  margin-left: 21;
+}
+.iconBoxGithub {
+  position: absolute;
+  width: 50;
+  height: 50;
+  background: #d9d9d9;
+  border-radius: 20px;
+}
+.github {
+  position: absolute;
+  width: 38;
+  height: 39;
+  left: 6;
+  top: 6;
+}
+
+.boxNavbar {
+  background-color: #d9d9d9;
+  border-radius: 30px;
+  margin-top: 22px;
+  display: flex;
+  flex-direction: row;
+  /* min-width: 62%; */
+}
+.boxPortofolio {
+  min-width: 290px;
+  min-height: 43;
+}
+.containerBoxPortofolio {
+  background-color: #9d8585;
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  align-self: center;
+}
+.textPortofolio {
+  display: flex;
+  flex-direction: row;
+  margin-left: 30%;
+}
+.iconPortofolio {
+  align-self: center;
+  max-width: 24;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.portofolio {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: Abeezee;
+  font-size: 15;
+  text-align: center;
+  color: white;
+  min-width: 100;
+  min-height: 18;
+  align-self: center;
+}
+.containerBoxBlog {
+  background-color: #9d8585;
+  border-radius: 20px;
+  margin-left: 26;
+  margin-top: 17;
+  margin-bottom: 17;
+  margin-right: 23;
+}
+.textBlog {
+  display: flex;
+  flex-direction: row;
+}
+.iconBlog {
+  width: 24;
+  height: 24;
+  margin-left: 63;
+  margin-top: 10;
+}
+.blog {
+  font-family: Abeezee;
+  font-size: 15;
+  text-align: center;
+  color: white;
+  margin-top: 13;
+  margin-left: 19;
+  margin-right: 85;
+  margin-bottom: 12;
+  align-self: center;
+}
+.containerBox {
+  margin-top: 22;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.containerContent {
+  margin-top: 35;
+  display: flex;
+}
+.content {
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.iconArrow {
+  background-color: #ab9292;
+  display: flex;
+  border-radius: 20px;
+  width: 20;
+  height: 35;
+}
+.iconArrowRight {
+  background-color: #ab9292;
+  border-radius: 20px;
+  width: 20;
+  height: 35;
+  transform: rotate(-180deg);
+  margin-left: 3;
+  margin-top: 86;
+  margin-right: 4;
+  margin-bottom: 85;
+}
+.panah {
+  align-self: center;
+  margin-left: 3;
+  margin-top: 86;
+  margin-bottom: 85;
+}
+.panahKanan {
+  align-self: center;
+}
+.imageIcon {
+  margin-top: 84;
+  margin-bottom: 80;
+  margin-left: 114;
+  margin-right: 114;
+  width: 87;
+  height: 82;
+  align-self: center;
+}
+.boxCardReactNative {
+  background-color: #5c4242;
+  width: 120;
+  height: 22;
+  margin-left: 12;
+  margin-top: 9;
+  border-radius: 10px;
+}
+.containerReactNative {
+  width: 115;
+  height: 18;
+  margin-left: 12;
+}
+.reactNative {
+  font-family: Abeezee;
+  color: white;
+  font-size: 15;
+}
+.containerDescription {
+  height: 18;
+  margin-left: 12;
+  margin-top: 9;
+}
+.description {
+  font-family: Abeezee;
+  color: white;
+  font-size: 15;
+}
