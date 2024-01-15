@@ -3,71 +3,94 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
-    <link href="style.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Kavoon&display=swap"
       rel="stylesheet"
     />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              kavoon: ["Kavoon"],
+              inter: ["Inter"],
+            },
+            colors: {
+              primary: "#3BCEAC",
+              background: "#284B63",
+              gray: "#475569",
+            },
+          },
+        },
+      };
+    </script>
     <style>
       html {
         scroll-behavior: smooth;
       }
     </style>
-    <title>Bagus Aditya Abimanyu</title>
+    <title>Portofolio | Bagus Aditya Abimanyu</title>
   </head>
-  <body class="max-w-full min-h-full text-white">
+  <body
+    class="max-w-full lg:mx-20 mx-4 bg-background min-h-full font-inter text-white"
+  >
     <!-- Home -->
-    <div class="bg-slate-700" id="home">
+    <div
+      class="flex items-center lg:mt-0 mt-5 justify-evenly min-h-screen lg:flex-row flex-col-reverse pt-4 sm:mx-5"
+    >
       <div
-        class="flex items-center justify-evenly min-h-screen lg:flex-row flex-col-reverse lg:mx-20 mx-5 pt-4"
+        class="w-full h-full flex flex-col text-white mt-2 mb-2 lg:mt-0 lg:mb-0"
       >
-        <div
-          class="w-full h-full flex flex-col text-white mt-2 mb-2 lg:mt-0 lg:mb-0"
-        >
-          <div>
-            <h3 class="text-3xl p-1">Hello, I'M</h3>
-            <h3 class="text-4xl p-1 font-semibold">Bagas Aditya Abimanyu</h3>
-            <h3 class="text-3xl p-1 sm:text-justify">
-              Fast-learning front-end developer with a strong programming
-              background.
-            </h3>
-          </div>
-          <div class="flex flex-row mt-1 lg:mt-3">
-            <a href="https://www.instagram.com/bagas_adtyaa/">
-              <i
-                data-feather="instagram"
-                width="42"
-                height="42 "
-                class="hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md hover:p-1"
-              ></i>
-            </a>
-            <a href="https://github.com/bagasadityaa/">
-              <i
-                data-feather="github"
-                width="42"
-                height="42 "
-                class="mx-3 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md hover:p-1"
-              ></i>
-            </a>
-          </div>
+        <div>
+          <h2 class="text-2xl p-1 font-medium text-primary">
+            Hi, i'm Bagas Aditya Abimanyu
+          </h2>
+          <h1 class="text-4xl p-1 text-color-primary font-bold">
+            FRONT-END WEB DEVELOPER
+          </h1>
+          <h3 class="text-lg p-1">
+            Fast-learning front-end developer with a strong programming
+            background.
+          </h3>
         </div>
-        <div class="w-full h-full flex justify-center">
-          <img src="images/profile.jpg" class="rounded-full" />
+        <div class="flex flex-row mt-1 items-center lg:mt-3">
+          <a
+            href="mailto:Bagasaditya599@gmail.com"
+            class="bg-primary p-1.5 rounded-lg flex flex-row items-center"
+          >
+            <i data-feather="mail" width="42" height="42 " class="pr-1"> </i>
+            Email Me
+          </a>
+          <a href="https://www.instagram.com/bagas_adtyaa/">
+            <i
+              data-feather="instagram"
+              width="42"
+              height="42 "
+              class="hover:drop-shadow-lg mx-3 hover:bg-slate-400 hover:rounded-md hover:p-1"
+            ></i>
+          </a>
+          <a href="https://github.com/bagasadityaa/">
+            <i
+              data-feather="github"
+              width="42"
+              height="42 "
+              class="mx-3 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md hover:p-1"
+            ></i>
+          </a>
         </div>
+      </div>
+      <div class="w-full h-full flex justify-center">
+        <img src="images/profile.jpg" class="rounded-full" />
       </div>
     </div>
     <!-- About -->
-    <div class="bg-slate-800 min-h-screen" id="about">
-      <h3 class="font-bold text-center text-4xl pt-8">ABOUT</h3>
-      <div class="flex flex-col mx-5 lg:flex-row lg:mx-20 sm:flex-col">
+    <div class="min-h-screen lg:mt-0 mt-5" id="about">
+      <div class="flex flex-col lg:flex-row sm:flex-col">
         <div class="flex sm:justify-center">
           <img
             src="images/profileblackandwhite.png"
@@ -76,10 +99,10 @@
           />
         </div>
         <div class="text-white lg:mx-10 sm:mt-3">
-          <h3 class="text-2xl font-bold">
-            WEBSITE DEVELOPER (FRONT-END & BACK-END)
-          </h3>
-          <p class="text-xl font-semibold italic text-justify">
+          <h1 class="text-4xl font-bold mt-1 lg:mt-0">
+            FRONT-END WEB DEVELOPER
+          </h1>
+          <p class="text-lg font-normal">
             I am a graduate of Pamulang University in 2024 with a degree in
             Computer Engineering. I am highly enthusiastic about exploring new
             front-end technologies and staying abreast of the latest
@@ -87,24 +110,25 @@
           </p>
           <div class="flex flex-col lg:flex-row w-full">
             <div class="flex flex-col w-full lg:w-1/2">
-              <h3 class="text-xl font-bold pt-1">
+              <h3 class="text-lg font-bold pt-1">
                 <i class="ph ph-caret-right"></i>
                 Age: <span class="font-normal">22</span>
               </h3>
-              <h3 class="text-xl font-bold pt-1">
+              <h3 class="text-lg font-bold pt-1">
                 <i class="ph ph-caret-right"></i>
                 Address:
                 <span class="font-normal">Tangerang Selatan, Indonesia</span>
               </h3>
-              
-            </div>
-            <div class="flex flex-col w-full lg:w-1/2">
-              <h3 class="text-xl font-bold pt-1">
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                Website: <span class="font-normal">bagasaditya.github.io</span>
+              </h3>
+              <h3 class="text-lg font-bold pt-1">
                 <i class="ph ph-caret-right"></i>
                 Academic:
                 <span class="font-normal">Computer Science</span>
               </h3>
-              <h3 class="text-xl font-bold pt-1">
+              <h3 class="text-lg font-bold pt-1">
                 <i class="ph ph-caret-right"></i>
                 Email:
                 <span class="font-normal"
@@ -114,31 +138,118 @@
                 >
               </h3>
             </div>
+            <!-- <div class="flex flex-col w-full lg:w-1/2"></div> -->
           </div>
-          <h2 class="text-2xl mt-5 font-bold">SKILLS</h2>
+          <h2 class="text-xl mt-5 font-bold">SKILLS</h2>
           <div class="flex flex-col lg:flex-row w-full">
             <div class="flex flex-col w-full lg:w-1/2">
-              <h3 class="text-xl font-semibold pt-1">
+              <h3 class="text-lg font-bold pt-1">
                 <i class="ph ph-caret-right"></i>
                 HTML
               </h3>
-              <h3 class="text-xl font-semibold pt-1">
+              <h3 class="text-lg font-bold pt-1">
                 <i class="ph ph-caret-right"></i>
                 TAILWINDCSS
               </h3>
-            </div>
-            <div class="flex flex-col w-full lg:w-1/2">
-              <h3 class="text-xl font-semibold pt-1">
+              <h3 class="text-lg font-bold pt-1">
                 <i class="ph ph-caret-right"></i>
                 FIGMA
               </h3>
-              <h3 class="text-xl font-semibold pt-1">
+              <h3 class="text-lg font-bold pt-1">
                 <i class="ph ph-caret-right"></i>
                 LARAVEL
               </h3>
             </div>
+            <!-- <div class="flex flex-col w-full lg:w-1/2"></div> -->
           </div>
         </div>
+      </div>
+    </div>
+    <!-- Project -->
+    <div class="min-h-screen lg:mt-0 mt-5">
+      <h1 class="font-bold text-3xl mb-2.5">Project</h1>
+      <div class="mb-5">
+        <a href="#" class="">
+          <img src="/images/Desktop.png" class="mb-1" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Lihat Website
+          </div>
+        </a>
+      </div>
+      <div class="mb-5">
+        <a href="#" class="">
+          <img src="/images/Desktop.png" class="mb-1" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Lihat Website
+          </div>
+        </a>
+      </div>
+      <div class="mb-5">
+        <a href="#" class="">
+          <img src="/images/Desktop.png" class="mb-1" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Lihat Website
+          </div>
+        </a>
+      </div>
+      <div class="mb-5">
+        <a href="#" class="">
+          <img src="/images/Desktop.png" class="mb-1" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Lihat Website
+          </div>
+        </a>
+      </div>
+      <div class="mb-5">
+        <a href="#" class="">
+          <img src="/images/Desktop.png" class="mb-1" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Lihat Website
+          </div>
+        </a>
+      </div>
+      <div class="mb-5">
+        <a href="#" class="">
+          <img src="/images/Desktop.png" class="mb-1" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Lihat Website
+          </div>
+        </a>
+      </div>
+      <div class="mb-5">
+        <a href="#" class="">
+          <img src="/images/Desktop.png" class="mb-1" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Lihat Website
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- interested -->
+    <div
+      class="my-20 text-lg justify-between p-7 items-center flex lg:flex-row flex-col bg-gray rounded-xl"
+    >
+      Interested in working with me?
+      <div class="flex flex-row items-center">
+        <a
+          href="#"
+          class="outline outline-offset-2 outline-white p-1.5 rounded-lg"
+          >Lihat Full Project</a
+        >
+        <a
+          href="mailto:Bagasaditya599@gmail.com"
+          class="p-1.5 rounded-lg flex flex-row mx-5 items-center bg-black"
+        >
+          <i data-feather="mail" width="42" height="42 " class="pr-1"> </i>
+          Email Me
+        </a>
       </div>
     </div>
   </body>
