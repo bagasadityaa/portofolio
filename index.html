@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Kavoon&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              kavoon: ["Kavoon"],
+              inter: ["Inter"],
+            },
+            colors: {
+              primary: "#3BCEAC",
+              background: "#284B63",
+              gray: "#475569",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      #particles-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1; /* Ensure particles stay behind other content */
+      }
+    </style>
+
+    <title>Portofolio | Bagus Aditya Abimanyu</title>
+  </head>
+  <body
+    class="max-w-full lg:mx-20 mx-4 bg-background min-h-full font-inter text-white"
+  >
+    <div id="particles-container"></div>
+    <div id="loader-container" class="loader-container">
+      <div id="loader" class="loader"></div>
+    </div>
+    <!-- Home -->
+    <div
+      class="flex items-center lg:mt-0 mt-5 justify-evenly min-h-screen lg:flex-row flex-col-reverse pt-4 sm:mx-5"
+    >
+      <div
+        class="w-full h-full flex flex-col text-white mt-2 mb-2 lg:mt-0 lg:mb-0"
+      >
+        <div>
+          <h2 class="text-2xl p-1 font-medium text-primary">
+            Hi, i'm Bagas Aditya Abimanyu
+          </h2>
+          <h1 class="text-4xl p-1 text-color-primary font-bold">
+            FRONT-END WEB DEVELOPER
+          </h1>
+          <h3 class="text-lg p-1">
+            Fast-learning front-end developer with a strong programming
+            background.
+          </h3>
+        </div>
+        <div class="flex flex-row mt-1 items-center lg:mt-3">
+          <a
+            href="mailto:Bagasaditya599@gmail.com"
+            class="bg-primary p-1.5 rounded-lg flex flex-row items-center"
+          >
+            <i data-feather="mail" width="42" height="42 " class="pr-1"> </i>
+            Email Me
+          </a>
+          <a href="https://www.instagram.com/bagas_adtyaa/">
+            <i
+              data-feather="instagram"
+              width="42"
+              height="42 "
+              class="hover:drop-shadow-lg mx-3 hover:bg-slate-400 hover:rounded-md hover:p-1"
+            ></i>
+          </a>
+          <a href="https://github.com/bagasadityaa/">
+            <i
+              data-feather="github"
+              width="42"
+              height="42 "
+              class="mx-3 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md hover:p-1"
+            ></i>
+          </a>
+        </div>
+      </div>
+      <div class="w-full h-full flex justify-center">
+        <img src="images/profile.jpg" class="rounded-full" />
+      </div>
+    </div>
+    <!-- About -->
+    <div class="min-h-screen lg:mt-0 mt-5" id="about" data-aos="fade-up">
+      <div class="flex flex-col lg:flex-row sm:flex-col">
+        <div class="flex sm:justify-center">
+          <img
+            src="images/profileblackandwhite.png"
+            class="rounded-lg"
+            width="1000"
+          />
+        </div>
+        <div class="text-white lg:mx-10 sm:mt-3">
+          <h1 class="text-4xl font-bold mt-1 lg:mt-0">
+            FRONT-END WEB DEVELOPER
+          </h1>
+          <p class="text-lg font-normal">
+            I am a graduate of Pamulang University in 2024 with a degree in
+            Computer Engineering. I am highly enthusiastic about exploring new
+            front-end technologies and staying abreast of the latest
+            developments in the tech industry.
+          </p>
+          <div class="flex flex-col lg:flex-row w-full">
+            <div class="flex flex-col w-full lg:w-1/2">
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                Age: <span class="font-normal">22</span>
+              </h3>
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                Address:
+                <span class="font-normal">Tangerang Selatan, Indonesia</span>
+              </h3>
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                Website:
+                <span class="font-normal">bagasaditya.github.io</span>
+              </h3>
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                Academic:
+                <span class="font-normal">Computer Science</span>
+              </h3>
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                Email:
+                <span class="font-normal"
+                  ><a href="mailto:Bagasaditya599@gmail.com"
+                    >Bagasaditya599@gmail.com</a
+                  ></span
+                >
+              </h3>
+            </div>
+            <!-- <div class="flex flex-col w-full lg:w-1/2"></div> -->
+          </div>
+          <h2 class="text-xl mt-5 font-bold">SKILLS</h2>
+          <div class="flex flex-col lg:flex-row w-full">
+            <div class="flex flex-col w-full lg:w-1/2">
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                Next Js
+              </h3>
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                React Native
+              </h3>
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                TAILWINDCSS
+              </h3>
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                FIGMA
+              </h3>
+              <h3 class="text-lg font-bold pt-1">
+                <i class="ph ph-caret-right"></i>
+                LARAVEL
+              </h3>
+            </div>
+            <!-- <div class="flex flex-col w-full lg:w-1/2"></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Project -->
+    <div class="lg:mt-0 mt-5">
+      <h1 class="font-bold text-xl mb-2.5">PROJECT</h1>
+      <div class="mb-5" data-aos="fade-up">
+        <a href="https://bagasadityaa.github.io/ramadhankareem/">
+          <img src="images/ramadhanKareem.png" class="mb-1" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Visit Website
+          </div>
+        </a>
+      </div>
+
+      <div class="mb-5" data-aos="fade-up">
+        <a
+          href="https://anime-list-bagas-adityas-projects.vercel.app/"
+          class=""
+        >
+          <img src="images/Anime.png" class="mb-1" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Visit Website
+          </div>
+        </a>
+      </div>
+      <div class="mb-5" data-aos="fade-up">
+        <a
+          href="https://filmnextjs-bagas-adityas-projects.vercel.app/"
+          class=""
+        >
+          <img src="images/moviefilm.png" class="mb-1" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Visit Website
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- interested -->
+    <div
+      class="text-lg justify-between lg:p-4 items-center flex lg:flex-row flex-col md:flex-row bg-gray rounded-xl md:p-4"
+    >
+      Interested in working with me?
+      <div class="flex flex-col lg:flex-row items-center">
+        <a
+          href="mailto:Bagasaditya599@gmail.com"
+          class="outline my-4 outline-offset-2 flex flex-row outline-white p-1.5 items-center rounded-lg"
+        >
+          <i data-feather="mail" width="42" height="42 " class="pr-1"> </i>
+          Email Me
+        </a>
+      </div>
+    </div>
+
+    <script src="particles.js"></script>
+
+    <script>
+      // Initialize particles
+      particlesJS("particles-container", {
+        particles: {
+          number: {
+            value: 80,
+            density: {
+              enable: true,
+              value_area: 800,
+            },
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
+            },
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
+          },
+          opacity: {
+            value: 0.5,
+            random: false,
+            anim: {
+              enable: false,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false,
+            },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: false,
+              speed: 40,
+              size_min: 0.1,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 6,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "repulse",
+            },
+            onclick: {
+              enable: true,
+              mode: "push",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 8,
+              speed: 3,
+            },
+            repulse: {
+              distance: 200,
+              duration: 0.4,
+            },
+            push: {
+              particles_nb: 4,
+            },
+            remove: {
+              particles_nb: 2,
+            },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.body.classList.add("loading-complete"); // Add loading-complete class to body when document is fully loaded
+    });
+  </script>
+  <script>
+    feather.replace();
+  </script>
+</html>
