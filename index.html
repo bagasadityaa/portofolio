@@ -43,6 +43,9 @@
         height: 100%;
         z-index: -1; /* Ensure particles stay behind other content */
       }
+      .slide {
+        transition: opacity 0.5s ease-in-out;
+      }
     </style>
 
     <title>Portofolio | Bagus Aditya Abimanyu</title>
@@ -122,7 +125,11 @@
           href="https://anime-list-bagas-adityas-projects.vercel.app/"
           class=""
         >
-          <img src="images/Anime.png" class="mb-1" />
+          <div id="slideshow" class="relative">
+            <img src="images/posteranime.svg" class="mb-1 slide" />
+            <img src="images/posteranime2.svg" class="mb-1 slide hidden" />
+          </div>
+
           <div class="flex flex-row items-center">
             <i data-feather="link" class="mr-2"></i>
             Visit Website
@@ -260,6 +267,16 @@
       });
     </script>
   </body>
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    setInterval(() => {
+      slides[currentSlide].classList.add("hidden");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.remove("hidden");
+    }, 2000); // Ganti gambar setiap 2 detik
+  </script>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
