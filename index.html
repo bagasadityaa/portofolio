@@ -113,7 +113,12 @@
     <div class="lg:mt-0 mt-5">
       <h1 class="font-bold text-xl mb-2.5">PROJECT</h1>
       <div class="lg:grid-cols-3 grid">
-        <button id="openBtn" class="mb-5 mx-2" data-aos="fade-up">
+        <!-- Tombol pembuka pop-up 1 -->
+        <button
+          class="openBtn mb-5 mx-2"
+          data-target="popup1"
+          data-aos="fade-up"
+        >
           <img src="images/posterramadhan.svg" class="mb-1 rounded-lg" />
           <div class="flex flex-row items-center">
             <i data-feather="link" class="mr-2"></i>
@@ -121,55 +126,131 @@
           </div>
         </button>
 
-        <div class="mb-5 mx-2" data-aos="fade-up">
-          <a href="https://anime-list-bagas-adityas-projects.vercel.app/">
-            <div id="slideshow" class="relative">
-              <img src="images/posteranime.svg" class="mb-1 rounded-lg slide" />
-              <img
-                src="images/posteranime2.svg"
-                class="mb-1 rounded-lg slide hidden"
-              />
-            </div>
+        <button
+          class="openBtn mb-5 mx-2"
+          data-target="popup2"
+          data-aos="fade-up"
+        >
+          <img src="images/postermoviefilm.svg" class="mb-1 rounded-lg" />
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Visit Website
+          </div>
+        </button>
+        <button
+          class="openBtn mb-5 mx-2"
+          data-target="popup3"
+          data-aos="fade-up"
+        >
+          <div id="slideshow" class="relative">
+            <img src="images/posteranime.svg" class="mb-1 rounded-lg slide" />
+            <img
+              src="images/posteranime2.svg"
+              class="mb-1 rounded-lg slide hidden"
+            />
+          </div>
+          <div class="flex flex-row items-center">
+            <i data-feather="link" class="mr-2"></i>
+            Visit Website
+          </div>
+        </button>
 
-            <div class="flex flex-row items-center">
-              <i data-feather="link" class="mr-2"></i>
-              Visit Website
-            </div>
-          </a>
-        </div>
-        <div class="mb-5 mx-2" data-aos="fade-up">
-          <a
-            href="https://filmnextjs-bagas-adityas-projects.vercel.app/"
-            class=""
-          >
-            <img src="images/postermoviefilm.svg" class="mb-1 rounded-lg" />
-            <div class="flex flex-row items-center">
-              <i data-feather="link" class="mr-2"></i>
-              Visit Website
-            </div>
-          </a>
-        </div>
         <div
-          id="popup"
-          class="fixed rounded shadow-lg bg-gray top-0 left-0 right-0 bottom-0 items-center overflow-scroll justify-center flex hidden"
+          id="popup1"
+          class="popup fixed rounded shadow-lg bg-gray top-0 left-0 right-0 bottom-0 items-center overflow-scroll justify-center flex hidden"
         >
           <div class="p-4 w-screen h-screen">
             <div class="flex items-center justify-between">
               <h1 class="text-xl font-bold">Ramadhan Kareem</h1>
-              <button id="closeBtn">
+              <button class="closeBtn">
                 <i data-feather="x-circle"></i>
               </button>
             </div>
             <iframe
               src="https://bagasadityaa.github.io/ramadhankareem/"
               class="w-full h-4/5 mt-2 bg-white rounded-lg"
-            >
-            </iframe>
+            ></iframe>
             <div class="mt-2">
               <h1 class="text-lg font-semibold">Informasi Project</h1>
             </div>
           </div>
         </div>
+
+        <div
+          id="popup2"
+          class="popup fixed rounded shadow-lg bg-gray top-0 left-0 right-0 bottom-0 items-center overflow-scroll justify-center flex hidden"
+        >
+          <div class="p-4 w-screen h-screen">
+            <div class="flex items-center justify-between">
+              <h1 class="text-xl font-bold">Movie Film</h1>
+              <button class="closeBtn">
+                <i data-feather="x-circle"></i>
+              </button>
+            </div>
+            <iframe
+              src="https://filmnextjs-bagas-adityas-projects.vercel.app/"
+              class="w-full h-4/5 mt-2 bg-white rounded-lg"
+            ></iframe>
+            <div class="mt-2">
+              <h1 class="text-lg font-semibold">Informasi Project</h1>
+              <h1 class="text-base">Framework: Next Js</h1>
+              <h1 class="text-base">
+                Api:
+                <a
+                  class="underline"
+                  href="https://developer.themoviedb.org/reference/movie-reviews"
+                  >The Movie Db</a
+                >
+              </h1>
+              <h2>
+                Visit Website:
+                <a
+                  class="underline"
+                  href="https://filmnextjs-bagas-adityas-projects.vercel.app/"
+                  >https://filmnextjs-bagas-adityas-projects.vercel.app/</a
+                >
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div
+          id="popup3"
+          class="popup fixed rounded shadow-lg bg-gray top-0 left-0 right-0 bottom-0 items-center overflow-scroll justify-center flex hidden"
+        >
+          <div class="p-4 w-screen h-screen">
+            <div class="flex items-center justify-between">
+              <h1 class="text-xl font-bold">Anime</h1>
+              <button class="closeBtn">
+                <i data-feather="x-circle"></i>
+              </button>
+            </div>
+            <iframe
+              src="https://anime-list-bagas-adityas-projects.vercel.app/"
+              class="w-full h-4/5 mt-2 bg-white rounded-lg"
+            ></iframe>
+            <div class="mt-2">
+              <h1 class="text-lg font-semibold">Informasi Project</h1>
+              <h1 class="text-base">Framework: Next Js</h1>
+              <h1 class="text-base">
+                Api:
+                <a class="underline" href="https://docs.api.jikan.moe/"
+                  >Jikan</a
+                >
+              </h1>
+              <h2>
+                Visit Website:
+                <a
+                  class="underline"
+                  href="https://anime-list-bagas-adityas-projects.vercel.app/"
+                  >https://anime-list-bagas-adityas-projects.vercel.app/</a
+                >
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Script Feather Icons -->
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
       </div>
     </div>
 
