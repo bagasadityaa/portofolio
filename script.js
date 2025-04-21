@@ -7,30 +7,54 @@ const portofolios = [
     image: "images/posterramadhan.svg",
     description: "Aplikasi Web ramadhan",
     date: "2024-02-10",
+    link: "https://bagasadityaa.github.io/ramadhankareem/",
   },
   {
     id: 2,
-    title: "My Anime List ",
-    image: "images/posterramadhan.svg",
+    title: "Anime List ",
+    image: "images/posteranime.svg",
     description: "Aplikasi Web ramadhan",
-    date: "2024-03-01",
+    date: "2024-04-02",
+    link: "https://anime-list-bagas-adityas-projects.vercel.app/",
+  },
+  {
+    id: 3,
+    title: "List Movie",
+    image: "images/postermoviefilm.svg",
+    description: "Aplikasi Web ramadhan",
+    date: "2024-04-10",
+    link: "https://filmnextjs-bagas-adityas-projects.vercel.app/",
+  },
+  {
+    id: 4,
+    title: "Gemini Ai",
+    image: "images/ai.svg",
+    description: "Aplikasi Web ramadhan",
+    date: "2024-07-24",
+    link: "https://ai-gemini-git-main-bagas-adityas-projects.vercel.app/",
   },
 ];
 
+const sortedDate = portofolios.sort((a, b) => {
+  return new Date(b.date) - new Date(a.date);
+});
 const container = document.getElementById("portofolio-list");
 
-portofolios.forEach((item) => {
+sortedDate.forEach((item) => {
   container.innerHTML += `
-<div class="rounded-lg shadow-md p-4">
+  <a href="${item.link}" >
+  <div class="rounded-lg shadow-md py-3 mb-2 sm:mb-20 ">
   <img
     src="${item.image}"
     alt="${item.title}"
-    class="w-full h-40 object-cover rounded-md mb-2"
-  />
+    class="w-full h-full object-cover rounded-md mb-2"
+    />
+  <div class="flex flex-row items-center justify-between">
   <h3 class="text-xl font-semibold text-gray-800">${item.title}</h3>
-  <p class="text-sm text-gray-500 mb-1">${item.date}</p>
-  <p class="text-gray-700">${item.description}</p>
+  <p class="text-xl text-gray-500 ">${item.date}</p>
+  </div>
 </div>
+</a>
 `;
 });
 setInterval(() => {

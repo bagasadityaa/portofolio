@@ -53,13 +53,13 @@
     <title>Portofolio | Bagus Aditya Abimanyu</title>
   </head>
   <body
-    class="max-w-full relative sm:mx16 bg-sky-950 mx-4 font-poppins min-h-full text-white"
+    class="max-w-full relative bg-sky-950 mx-3.5 sm:mx-40 font-poppins min-h-full text-white"
   >
     <!-- Home -->
     <nav
-      class="w-full bg-slate-600 bottom-0 sm:top-0 sm:sticky flex-1 fixed z-50 left-0 py-2 px-1 flex items-center justify-between"
+      class="w-full bg-slate-600 lg:bg-transparent bottom-0 sm:sticky flex-1 fixed z-50 left-0 py-2 px-1 flex items-center justify-between"
     >
-      <div class="flex items-center space-x-1">
+      <div class="flex items-center space-x-5">
         <div
           class="flex justify-center items-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 rounded-full shadow-xl overflow-hidden"
         >
@@ -71,13 +71,12 @@
         <p class="font-semibold">Bagas Aditya</p>
       </div>
       <div class="space-x-1.5">
-        <a> Project </a>
-        <a> Contact </a>
+        <a href="#project"> Project </a>
       </div>
     </nav>
     <!-- DESKTOP VERSION -->
     <section
-      class="hidden lg:flex items-center w-full justify-evenly min-h-screen flex-row"
+      class="hidden lg:flex items-center w-full justify-evenly lg:min-h-screen flex-row"
     >
       <div class="w-[60%] flex flex-col justify-between px-4">
         <h2 class="text-xl p-1 font-medium text-primary">
@@ -182,107 +181,14 @@
     </section>
 
     <!-- Project -->
-    <section class="lg:mt-0 mt-5">
+    <section class="lg:mt-0 mt-8" id="project">
       <h1 class="font-bold text-xl mb-2.5">PROJECT</h1>
-      <div class="lg:grid-cols-3 grid">
-        <a
-          href="https://ai-gemini-git-main-bagas-adityas-projects.vercel.app/"
-          class="mb-5 mx-2"
-          data-aos="fade-up"
-        >
-          <img src="images/ai.svg" class="rounded-lg" />
-          <div class="flex flex-row justify-between">
-            <div>
-              <div class="flex flex-row items-center">
-                <i
-                  data-feather="link"
-                  class="mx-2 w-[15px] h-[15px] lg:w-[19px] lg:h-[19px]"
-                ></i>
-                <p>Visit Website</p>
-              </div>
-            </div>
-            <p>24 Juli 2024</p>
-          </div>
-        </a>
-        <a
-          href="https://filmnextjs-bagas-adityas-projects.vercel.app/"
-          class="mb-5 mx-2"
-          data-aos="fade-up"
-        >
-          <img src="images/postermoviefilm.svg" class="rounded-lg" />
-          <div class="flex flex-row justify-between">
-            <div>
-              <div class="flex flex-row items-center">
-                <i
-                  data-feather="link"
-                  class="mr-2"
-                  style="width: 19; height: 19"
-                ></i>
-                Visit Website
-              </div>
-            </div>
-            10 April 2024
-          </div>
-        </a>
-        <a
-          href="https://anime-list-bagas-adityas-projects.vercel.app/"
-          class="mb-5 mx-2"
-          data-aos="fade-up"
-        >
-          <div>
-            <div id="slideshow" class="relative">
-              <img src="images/posteranime.svg" class="rounded-lg slide" />
-              <img
-                src="images/posteranime2.svg"
-                class="rounded-lg slide hidden"
-              />
-            </div>
-          </div>
-          <div class="flex flex-row justify-between">
-            <div>
-              <div class="flex flex-row items-center">
-                <i
-                  data-feather="link"
-                  class="mr-2"
-                  style="width: 19; height: 19"
-                ></i>
-                Visit Website
-              </div>
-            </div>
-            2 April 2024
-          </div>
-        </a>
-        <a
-          href="https://bagasadityaa.github.io/ramadhankareem/"
-          class="mb-5 mx-2"
-          data-aos="fade-up"
-        >
-          <div>
-            <img src="images/posterramadhan.svg" class="rounded-lg" />
-          </div>
-          <div class="flex flex-row justify-between">
-            <div>
-              <div class="flex flex-row items-center">
-                <i
-                  data-feather="link"
-                  class="mr-2"
-                  style="width: 19; height: 19"
-                ></i>
-                Visit Website
-              </div>
-            </div>
-            10 Februari 2024
-          </div>
-        </a>
 
-        <!-- Script Feather Icons -->
+      <div id="portofolio-list" class="gap-4">
         <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
       </div>
     </section>
 
-    <div id="portofolio-list" class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-      <!-- Akan diisi otomatis oleh JS -->
-    </div>
     <!-- interested -->
   </body>
 
