@@ -52,144 +52,149 @@
 
     <title>Portofolio | Bagus Aditya Abimanyu</title>
   </head>
-  <body
-    class="max-w-full relative bg-sky-950 mx-3.5 sm:mx-40 font-poppins min-h-full text-white"
-  >
+  <body class="w-full relative bg-sky-950 font-poppins min-h-full text-white">
     <!-- Home -->
     <nav
-      class="w-full bg-slate-600 lg:bg-transparent bottom-0 sm:sticky flex-1 fixed z-50 left-0 py-2 px-1 flex items-center justify-between"
+      id="navbar"
+      class="w-full lg:bg-transparent sm:sticky flex-1 fixed z-50 top-0 left-0 py-3 px-1 flex items-center justify-between transition-all duration-300"
     >
-      <div class="flex items-center space-x-5">
+      <div class="flex items-center mx-3.5 lg:mx-20 w-full justify-between">
+        <div class="flex items-center space-x-5">
+          <div
+            class="flex justify-center items-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 rounded-full shadow-xl overflow-hidden"
+          >
+            <img
+              src="images/profile.png"
+              class="h-10 w-10 object-cover object-top grayscale-[85%] transition duration-500"
+            />
+          </div>
+          <p class="font-semibold">Bagas Aditya</p>
+        </div>
+        <div class="space-x-1.5">
+          <a href="#project"> Project </a>
+        </div>
+      </div>
+    </nav>
+    <div class="mx-3.5 lg:mx-20">
+      <!-- DESKTOP VERSION -->
+      <section
+        class="hidden lg:flex items-center w-full justify-evenly flex-row lg:min-h-screen"
+      >
+        <div class="w-[60%] flex flex-col justify-between px-4">
+          <h2 class="text-xl p-1 font-medium text-primary">
+            👋 Hi, I'm Bagas Aditya Abimanyu
+          </h2>
+          <h1 class="text-3xl p-1 text-color-primary font-bold">
+            💻 FRONT-END WEB DEVELOPER
+          </h1>
+          <h3 class="text-balance leading-relaxed">
+            🎓 Saya lulusan Teknik Informatika dari Universitas Pamulang dan
+            memiliki ketertarikan besar dalam coding serta pengembangan
+            aplikasi.
+            <br /><br />
+            🍽️ Meskipun saat ini saya bekerja di industri restoran, saya terus
+            mengembangkan kemampuan di bidang web development—dengan fokus pada
+            <span class="font-semibold text-sky-300">Next.js</span>,
+            <span class="font-semibold text-sky-300">Laravel</span>,
+            <span class="font-semibold text-sky-300">Tailwind CSS</span>, dan
+            desain UI/UX menggunakan
+            <span class="font-semibold text-sky-300">Figma</span>. <br /><br />
+            🚀 Saya juga berpengalaman dalam hosting dan deployment proyek, dan
+            terbuka untuk kolaborasi maupun peluang seru di dunia digital.
+          </h3>
+
+          <div class="flex flex-row mt-6 items-center">
+            <a
+              href="https://instagram.com/bagas_adtyaaaa/"
+              class="mx-3 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1 flex flex-col items-center"
+            >
+              <i data-feather="instagram" width="40" height="40"></i>
+            </a>
+            <a
+              href="https://github.com/bagasadityaa/"
+              class="mx-3 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1 flex flex-col items-center"
+            >
+              <i data-feather="github" width="40" height="40"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Kanan: Gambar -->
         <div
-          class="flex justify-center items-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 rounded-full shadow-xl overflow-hidden"
+          class="flex w-[40%] justify-center items-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 rounded-2xl shadow-xl h-[550px] max-h-[90vh] overflow-hidden"
         >
           <img
             src="images/profile.png"
-            class="h-10 w-10 object-cover object-top grayscale-[85%] transition duration-500"
+            class="h-full w-auto object-cover object-top grayscale-[85%] transition duration-500"
           />
         </div>
-        <p class="font-semibold">Bagas Aditya</p>
-      </div>
-      <div class="space-x-1.5">
-        <a href="#project"> Project </a>
-      </div>
-    </nav>
-    <!-- DESKTOP VERSION -->
-    <section
-      class="hidden lg:flex items-center w-full justify-evenly lg:min-h-screen flex-row"
-    >
-      <div class="w-[60%] flex flex-col justify-between px-4">
-        <h2 class="text-xl p-1 font-medium text-primary">
-          👋 Hi, I'm Bagas Aditya Abimanyu
-        </h2>
-        <h1 class="text-3xl p-1 text-color-primary font-bold">
-          💻 FRONT-END WEB DEVELOPER
-        </h1>
-        <h3 class="text-balance leading-relaxed">
-          🎓 Saya lulusan Teknik Informatika dari Universitas Pamulang dan
-          memiliki ketertarikan besar dalam coding serta pengembangan aplikasi.
-          <br /><br />
-          🍽️ Meskipun saat ini saya bekerja di industri restoran, saya terus
-          mengembangkan kemampuan di bidang web development—dengan fokus pada
-          <span class="font-semibold text-sky-300">Next.js</span>,
-          <span class="font-semibold text-sky-300">Laravel</span>,
-          <span class="font-semibold text-sky-300">Tailwind CSS</span>, dan
-          desain UI/UX menggunakan
-          <span class="font-semibold text-sky-300">Figma</span>. <br /><br />
-          🚀 Saya juga berpengalaman dalam hosting dan deployment proyek, dan
-          terbuka untuk kolaborasi maupun peluang seru di dunia digital.
-        </h3>
+      </section>
 
-        <div class="flex flex-row mt-6 items-center">
-          <a
-            href="https://instagram.com/bagas_adtyaaaa/"
-            class="mx-3 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1 flex flex-col items-center"
-          >
-            <i data-feather="instagram" width="40" height="40"></i>
-          </a>
-          <a
-            href="https://github.com/bagasadityaa/"
-            class="mx-3 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1 flex flex-col items-center"
-          >
-            <i data-feather="github" width="40" height="40"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Kanan: Gambar -->
-      <div
-        class="flex w-[40%] justify-center items-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 rounded-2xl shadow-xl h-[550px] max-h-[90vh] overflow-hidden"
+      <!-- MOBILE VERSION -->
+      <section
+        class="lg:hidden mt-20 flex flex-col items-center w-full lg:mt-4 min-h-screen"
       >
-        <img
-          src="images/profile.png"
-          class="h-full w-auto object-cover object-top grayscale-[85%] transition duration-500"
-        />
-      </div>
-    </section>
-
-    <!-- MOBILE VERSION -->
-    <section class="lg:hidden flex flex-col items-center w-full mt-4">
-      <!-- Foto Profil -->
-      <div
-        class="flex justify-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 w-full rounded-lg"
-      >
-        <img
-          src="images/profile.png"
-          class="h-48 w-48 object-cover object-top grayscale-[85%]"
-        />
-      </div>
-
-      <!-- Deskripsi -->
-      <div class="w-full text-white mt-2 mb-2">
-        <h2 class="text-xl p-1 font-medium text-primary">
-          👋 Hi, I'm Bagas Aditya Abimanyu
-        </h2>
-        <h1 class="text-3xl p-1 text-color-primary font-bold">
-          💻 FRONT-END WEB DEVELOPER
-        </h1>
-        <h3 class="text-balance leading-relaxed">
-          🎓 Saya lulusan Teknik Informatika dari Universitas Pamulang dan
-          memiliki ketertarikan besar dalam coding serta pengembangan aplikasi.
-          <br /><br />
-          🍽️ Meskipun saat ini saya bekerja di industri restoran, saya terus
-          mengembangkan kemampuan di bidang web development—dengan fokus pada
-          <span class="font-semibold text-sky-300">Next.js</span>,
-          <span class="font-semibold text-sky-300">Laravel</span>,
-          <span class="font-semibold text-sky-300">Tailwind CSS</span>, dan
-          desain UI/UX menggunakan
-          <span class="font-semibold text-sky-300">Figma</span>. <br /><br />
-          🚀 Saya juga berpengalaman dalam hosting dan deployment proyek, dan
-          terbuka untuk kolaborasi maupun peluang seru di dunia digital.
-        </h3>
-
-        <!-- Sosial Media -->
-        <div class="flex flex-row mt-3 items-center">
-          <a
-            href="https://instagram.com/bagas_adtyaaaa/"
-            class="mx-2 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1"
-          >
-            <i data-feather="instagram" width="33" height="33"></i>
-          </a>
-          <a
-            href="https://github.com/bagasadityaa/"
-            class="mx-2 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1"
-          >
-            <i data-feather="github" width="33" height="33"></i>
-          </a>
+        <!-- Foto Profil -->
+        <div
+          class="flex justify-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 w-full rounded-lg"
+        >
+          <img
+            src="images/profile.png"
+            class="h-48 w-48 object-cover object-top grayscale-[85%]"
+          />
         </div>
-      </div>
-    </section>
 
-    <!-- Project -->
-    <section class="lg:mt-0 mt-8" id="project">
-      <h1 class="font-bold text-xl mb-2.5">PROJECT</h1>
+        <!-- Deskripsi -->
+        <div class="w-full text-white mt-2 mb-2">
+          <h2 class="text-xl p-1 font-medium text-primary">
+            👋 Hi, I'm Bagas Aditya Abimanyu
+          </h2>
+          <h1 class="text-3xl p-1 text-color-primary font-bold">
+            💻 FRONT-END WEB DEVELOPER
+          </h1>
+          <h3 class="text-balance leading-relaxed">
+            🎓 Saya lulusan Teknik Informatika dari Universitas Pamulang dan
+            memiliki ketertarikan besar dalam coding serta pengembangan
+            aplikasi.
+            <br /><br />
+            🍽️ Meskipun saat ini saya bekerja di industri restoran, saya terus
+            mengembangkan kemampuan di bidang web development—dengan fokus pada
+            <span class="font-semibold text-sky-300">Next.js</span>,
+            <span class="font-semibold text-sky-300">Laravel</span>,
+            <span class="font-semibold text-sky-300">Tailwind CSS</span>, dan
+            desain UI/UX menggunakan
+            <span class="font-semibold text-sky-300">Figma</span>. <br /><br />
+            🚀 Saya juga berpengalaman dalam hosting dan deployment proyek, dan
+            terbuka untuk kolaborasi maupun peluang seru di dunia digital.
+          </h3>
 
-      <div id="portofolio-list" class="gap-4">
-        <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-      </div>
-    </section>
+          <!-- Sosial Media -->
+          <div class="flex flex-row mt-3 items-center">
+            <a
+              href="https://instagram.com/bagas_adtyaaaa/"
+              class="mx-2 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1"
+            >
+              <i data-feather="instagram" width="33" height="33"></i>
+            </a>
+            <a
+              href="https://github.com/bagasadityaa/"
+              class="mx-2 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1"
+            >
+              <i data-feather="github" width="33" height="33"></i>
+            </a>
+          </div>
+        </div>
+      </section>
 
-    <!-- interested -->
+      <!-- Project -->
+      <section class="lg:mt-0 mt-8" id="project">
+        <h1 class="font-bold text-xl mb-2.5">PROJECT</h1>
+
+        <div id="portofolio-list" class="gap-4">
+          <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+        </div>
+      </section>
+    </div>
   </body>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

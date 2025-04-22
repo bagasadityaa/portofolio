@@ -57,33 +57,30 @@ sortedDate.forEach((item) => {
 </a>
 `;
 });
+
 setInterval(() => {
   slides[currentSlide].classList.add("hidden");
   currentSlide = (currentSlide + 1) % slides.length;
   slides[currentSlide].classList.remove("hidden");
 }, 5000);
 
-document.addEventListener("DOMContentLoaded", function () {
-  document.body.classList.add("loading-complete"); // Add loading-complete class to body when document is fully loaded
+window.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbar");
+  const nextSection = document.querySelector("section");
+  const navbarHeight = navbar.offsetHeight;
+
+  if (window.innerWidth <= 1024) {
+    // Mobile: tambahkan paddingTop ke section
+    nextSection.style.paddingTop = navbarHeight + "px";
+  }
 });
 
-// Dapatkan semua tombol pembuka dan tombol penutup
-const openBtns = document.querySelectorAll(".openBtn");
-const closeBtns = document.querySelectorAll(".closeBtn");
+const navbar = document.getElementById("navbar");
 
-// Tambahkan event listener untuk setiap tombol pembuka
-openBtns.forEach((openBtn) => {
-  openBtn.addEventListener("click", () => {
-    const targetId = openBtn.getAttribute("data-target"); // Dapatkan ID pop-up target dari atribut data-target
-    const popup = document.getElementById(targetId);
-    popup.classList.remove("hidden"); // Tampilkan pop-up
-  });
-});
-
-// Tambahkan event listener untuk setiap tombol penutup
-closeBtns.forEach((closeBtn) => {
-  closeBtn.addEventListener("click", () => {
-    const popup = closeBtn.closest(".popup");
-    popup.classList.add("hidden"); // Sembunyikan pop-up saat tombol penutup diklik
-  });
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10) {
+    navbar.classList.add("backdrop-blur-lg", "bg-slate-800/40", "shadow-md");
+  } else {
+    navbar.classList.remove("backdrop-blur-md", "bg-slate-800/40", "shadow-md");
+  }
 });
