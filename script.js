@@ -49,9 +49,9 @@ sortedDate.forEach((item) => {
     alt="${item.title}"
     class="w-full h-full object-cover rounded-md mb-2"
     />
-  <div class="flex flex-row items-center justify-between">
-  <h3 class="text-xl font-semibold text-gray-800">${item.title}</h3>
-  <p class="text-xl text-gray-500 ">${item.date}</p>
+  <div class="flex flex-row items-center justify-between mx-2">
+  <h3 class="text-base font-semibold text-gray-800">${item.title}</h3>
+  <p class="text-base text-gray-500 ">${item.date}</p>
   </div>
 </div>
 </a>
@@ -79,8 +79,46 @@ const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 10) {
-    navbar.classList.add("backdrop-blur-lg", "bg-slate-800/40", "shadow-md");
+    navbar.classList.add("backdrop-blur-md", "bg-slate-800/40", "shadow-md");
   } else {
     navbar.classList.remove("backdrop-blur-md", "bg-slate-800/40", "shadow-md");
   }
 });
+
+const text = [
+  "Web Developer",
+  "Fullstack Software Developer",
+  "Laravel, Next.js, React Native (Expo)",
+];
+const speed = 100;
+const delay = 1500;
+let i = 0;
+let j = 0;
+let currentText = "";
+let isDeleting = false;
+const isMobile = window.innerWidth < 1024;
+const targetId = isMobile ? "typewriter-mobile" : "typewriter-desktop";
+
+function type() {
+  const targetElement = document.getElementById(targetId);
+
+  currentText = text[i];
+
+  if (isDeleting) {
+    targetElement.innerHTML = currentText.substring(0, j--);
+  } else {
+    targetElement.innerHTML = currentText.substring(0, j++);
+  }
+
+  if (!isDeleting && j === currentText.length + 1) {
+    isDeleting = true;
+    setTimeout(type, delay);
+  } else if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % text.length;
+    setTimeout(type, 500);
+  } else {
+    setTimeout(type, speed);
+  }
+}
+document.addEventListener("DOMContentLoaded", type);

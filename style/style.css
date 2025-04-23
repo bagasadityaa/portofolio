@@ -24,6 +24,21 @@
     transform: rotate(1turn);
   }
 }
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  color: white;
+}
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
 /* Hide the loader when the document is fully loaded */
 body.loading-complete #loader-container {
   display: none;
