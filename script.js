@@ -43,7 +43,7 @@ const container = document.getElementById("portofolio-list");
 sortedDate.forEach((item) => {
   container.innerHTML += `
   <a href="${item.link}" >
-  <div class="rounded-lg shadow-md py-3 mb-2 sm:mb-20 ">
+  <div class="rounded-lg shadow-md py-3 mb-2 ">
   <img
     src="${item.image}"
     alt="${item.title}"
@@ -63,17 +63,6 @@ setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length;
   slides[currentSlide].classList.remove("hidden");
 }, 5000);
-
-window.addEventListener("DOMContentLoaded", () => {
-  const navbar = document.getElementById("navbar");
-  const nextSection = document.querySelector("section");
-  const navbarHeight = navbar.offsetHeight;
-
-  if (window.innerWidth <= 1024) {
-    // Mobile: tambahkan paddingTop ke section
-    nextSection.style.paddingTop = navbarHeight + "px";
-  }
-});
 
 const navbar = document.getElementById("navbar");
 
@@ -100,7 +89,7 @@ const isMobile = window.innerWidth < 1024;
 const targetId = isMobile ? "typewriter-mobile" : "typewriter-desktop";
 
 function type() {
-  const targetElement = document.getElementById(targetId);
+  const targetElement = document.getElementById("typewriter-text");
 
   currentText = text[i];
 

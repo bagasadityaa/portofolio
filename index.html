@@ -76,87 +76,28 @@
       </div>
     </nav>
     <div class="mx-3.5 lg:mx-20">
-      <!-- DESKTOP VERSION -->
       <section
-        class="hidden lg:flex items-center w-full justify-evenly flex-row"
+        class="flex flex-col lg:flex-row-reverse items-center justify-between w-full md:mt-0 mt-12 lg:mt-0"
       >
-        <div class="w-[60%] flex flex-col justify-between px-4">
-          <h2 class="text-xl p-1 font-medium text-primary">
-            👋 Hi, Saya Bagas Aditya Abimanyu
-          </h2>
-          <div class="text-3xl p-1 text-color-primary font-bold">
-            🧑‍💻 <span id="typewriter-desktop"></span
-            ><span class="cursor">|</span>
-          </div>
-          <h3 class="text-balance leading-relaxed">
-            🎓 Lulusan Teknik Informatika dari Universitas Pamulang dengan minat
-            besar dalam dunia pemrograman dan pengembangan aplikasi.
-            <br /><br />
-            💼 Saat ini bekerja di industri restoran, sambil terus mengasah
-            keterampilan di bidang web development—fokus pada
-            <span class="font-semibold text-sky-300">Next.js</span>,
-            <span class="font-semibold text-sky-300">Laravel</span>,
-            <span class="font-semibold text-sky-300">Tailwind CSS</span>, dan
-            desain UI/UX menggunakan
-            <span class="font-semibold text-sky-300">Figma</span>.
-            <br />
-            <br />
-            🚀 Berpengalaman dalam hosting dan deployment proyek, serta selalu
-            terbuka untuk kolaborasi dan eksplorasi peluang baru di dunia
-            digital.
-          </h3>
-
-          <div class="flex flex-row mt-6 items-center">
-            <a
-              href="https://instagram.com/bagas_adtyaaaa/"
-              class="mx-3 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1 flex flex-col items-center"
-            >
-              <i data-feather="instagram" width="40" height="40"></i>
-            </a>
-            <a
-              href="https://github.com/bagasadityaa/"
-              class="mx-3 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1 flex flex-col items-center"
-            >
-              <i data-feather="github" width="40" height="40"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Kanan: Gambar -->
         <div
-          class="flex w-[40%] justify-center items-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 rounded-2xl shadow-xl h-[550px] max-h-[90vh] overflow-hidden"
+          class="w-full lg:w-[30%] mt-5 md:mt-0 lg:mt-0 flex justify-center items-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 rounded-2xl shadow-xl h-[200px] lg:h-[550px] max-h-[90vh] overflow-hidden"
         >
           <img
             src="images/profile.png"
-            class="h-full w-auto object-cover object-top grayscale-[85%] transition duration-500"
+            class="lg:h-full h-48 w-48 lg:w-auto object-cover object-top grayscale-[85%] transition duration-500"
           />
         </div>
-      </section>
-
-      <!-- MOBILE VERSION -->
-      <section
-        class="lg:hidden mt-20 lg:mt-0 flex flex-col items-center w-full md:mt-0"
-      >
-        <!-- Foto Profil -->
-        <div
-          class="flex justify-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 w-full rounded-lg"
-        >
-          <img
-            src="images/profile.png"
-            class="h-48 w-48 object-cover object-top grayscale-[85%]"
-          />
-        </div>
-
-        <!-- Deskripsi -->
-        <div class="w-full text-white mt-2 mb-2">
+        <!-- Kiri: Teks -->
+        <div class="w-full lg:w-[60%] flex flex-col text-white">
           <h2 class="text-xl p-1 font-medium text-primary">
             👋 Hi, Saya Bagas Aditya Abimanyu
           </h2>
+
           <div class="text-3xl p-1 text-color-primary font-bold">
-            🧑‍💻 <span id="typewriter-mobile"></span><span class="cursor">|</span>
+            🧑‍💻 <span id="typewriter-text"></span><span class="cursor">|</span>
           </div>
 
-          <h3 class="text-balance leading-relaxed">
+          <h3 class="text-balance text-lg leading-relaxed">
             🎓 Lulusan Teknik Informatika dari Universitas Pamulang dengan minat
             besar dalam dunia pemrograman dan pengembangan aplikasi.
             <br /><br />
@@ -172,8 +113,7 @@
             digital.
           </h3>
 
-          <!-- Sosial Media -->
-          <div class="flex flex-row mt-3 items-center">
+          <div class="flex flex-row mt-6 items-center">
             <a
               href="https://instagram.com/bagas_adtyaaaa/"
               class="mx-2 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md p-1"
@@ -188,6 +128,8 @@
             </a>
           </div>
         </div>
+
+        <!-- Kanan: Gambar -->
       </section>
 
       <!-- Project -->
