@@ -43,15 +43,17 @@ const container = document.getElementById("portofolio-list");
 sortedDate.forEach((item) => {
   container.innerHTML += `
   <a href="${item.link}" >
-  <div class="rounded-lg shadow-md py-3 mb-2 ">
+  <div data-aos="fade-up" >
+  <div class="rounded-lg shadow-md ">
   <img
     src="${item.image}"
     alt="${item.title}"
     class="w-full h-full object-cover rounded-md mb-2"
     />
-  <div class="flex flex-row items-center justify-between mx-2">
+  <div class="flex flex-row items-center justify-between mx-2 py-2 px-1">
   <h3 class="text-base font-semibold text-gray-800">${item.title}</h3>
   <p class="text-base text-gray-500 ">${item.date}</p>
+  </div>
   </div>
 </div>
 </a>

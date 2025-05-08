@@ -25,6 +25,10 @@
   }
 }
 
+.link-hover {
+  @apply hover:font-bold hover:underline hover:underline-offset-2;
+}
+
 .cursor {
   display: inline-block;
   animation: blink 0.7s infinite;
