@@ -113,3 +113,32 @@ function type() {
   }
 }
 document.addEventListener("DOMContentLoaded", type);
+
+// percobaan
+const name = "Bagas Aditya Abimanyu";
+function typewriter() {
+  const textElement = document.getElementById("menulis-teks");
+  let i = 0;
+  function type() {
+    if (i < name.length) {
+      textElement.innerHTML += name.charAt(i);
+      i++;
+      setTimeout(type, 100);
+    }
+  }
+  function reset() {
+    if (i > name.length) {
+      i--;
+      textElement.innerHTML = name.subString(0, i);
+      setTimeout(reset, 100);
+    } else {
+      type();
+    }
+  }
+  textElement.innerHTML = "";
+  reset();
+  type();
+}
+
+typewriter();
+console.log(hitung);
