@@ -27,6 +27,14 @@ const portofolios = [
   },
   {
     id: 4,
+    title: "Food Web",
+    image: "images/foodweb.svg",
+    description: "Aplikasi Web ramadhan",
+    date: "2024-05-26",
+    link: "https://foodweb-bagas-adityas-projects.vercel.app/",
+  },
+  {
+    id: 5,
     title: "Gemini Ai",
     image: "images/ai.svg",
     description: "Aplikasi Web ramadhan",
