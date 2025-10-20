@@ -84,11 +84,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const text = [
-  "Web Developer",
-  "Fullstack Software Developer",
-  "Laravel, Next.js, React Native (Expo)",
-];
+const text = ["Web Developer", "Fullstack Software Developer"];
 const speed = 100;
 const delay = 1500;
 let i = 0;
@@ -149,4 +145,3 @@ function typewriter() {
 }
 
 typewriter();
-console.log(hitung);
