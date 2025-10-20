@@ -84,7 +84,7 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const text = ["Web Developer", "Fullstack Software Developer"];
+const text = ["", "Front-End Web Developer"];
 const speed = 100;
 const delay = 1500;
 let i = 0;
