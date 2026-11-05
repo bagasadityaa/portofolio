@@ -48,98 +48,275 @@
       .slide {
         transition: opacity 0.5s ease-in-out;
       }
+      .glass-panel {
+        background: oklch(27.9% 0.041 260.031);
+        backdrop-filter: blur(12);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+      }
+      .glow-cyan {
+        box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.25);
+      }
     </style>
 
     <title>Portofolio | Bagus Aditya Abimanyu</title>
   </head>
-  <body class="relative w-full min-h-full text-white bg-sky-950 font-poppins">
+  <body
+    class="bg-sky-950 text-slate-200 min-h-screen overflow-x-hidden selection:bg-cyan-500 selection:text-white relative w-full font-poppins"
+  >
     <!-- Home -->
-    <nav
-      id="navbar"
-      class="fixed top-0 left-0 z-50 flex items-center justify-between flex-1 w-full px-1 py-3 transition-all duration-300 lg:bg-transparent sm:sticky"
+    <div
+      class="fixed top-0 left-1/4 w-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
+    ></div>
+    <div
+      class="fixed bottom-10 right-10 w-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"
+    ></div>
+    <header
+      class="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80"
     >
-      <div class="flex items-center mx-3.5 lg:mx-20 w-full justify-between">
-        <div class="flex items-center space-x-3.5">
-          <div
-            class="flex items-center justify-center overflow-hidden rounded-full shadow-xl bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900"
-          >
-            <img
-              src="images/profile.png"
-              class="object-cover object-top w-10 h-10 transition duration-500"
-            />
-          </div>
-
-          <p>Bagas Aditya Abimanyu</p>
-        </div>
-        <div class="space-x-1.5">
-          <a href="#project" class="link-hover"> Project </a>
-        </div>
-      </div>
-    </nav>
-    <div class="mx-3.5 lg:mx-20">
-      <section
-        class="flex flex-col items-center w-full mt-12 lg:justify-between lg:min-h-screen lg:flex-row-reverse sm:mt-0 md:mt-0 lg:mt-0"
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
       >
-        <div
-          class="w-full lg:w-[30%] mt-5 sm:mt-0 md:mt-0 lg:mt-0 flex justify-center items-center bg-gradient-to-t from-slate-900 via-slate-800 to-blue-900 rounded-xl shadow-xl h-[200px] lg:h-[550px] max-h-[90vh] overflow-hidden"
-        >
+        <!-- Logo -->
+        <a href="/" class="flex items-center space-x-3 group">
           <img
             src="images/profile.png"
-            class="object-cover object-top w-48 mt-12 transition duration-500 h-52 lg:h-full lg:w-auto"
+            class="w-10 h-10 rounded-xl object-cover object-top flex items-center justify-center font-bold text-white shadow-lg group-hover:scale-105 transition-transform"
           />
+
+          <div>
+            <span
+              class="font-bold text-lg text-white tracking-tight block leading-tight"
+              >Bagas Aditya</span
+            >
+            <span class="text-xs text-cyan-400 font-medium tracking-wide"
+              >Web Developer</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+          <a
+            href="#about"
+            class="text-slate-300 hover:text-cyan-400 transition-colors"
+            >Tentang</a
+          >
+          <a
+            href="#skills"
+            class="text-slate-300 hover:text-cyan-400 transition-colors"
+            >Keterampilan</a
+          >
+          <a
+            href="#projects"
+            class="text-slate-300 hover:text-cyan-400 transition-colors"
+            >Proyek</a
+          >
+          <a
+            href="#contact"
+            class="text-slate-300 hover:text-cyan-400 transition-colors"
+            >Kontak</a
+          >
+        </nav>
+
+        <!-- CTA Header Button -->
+        <div class="hidden md:flex items-center space-x-3">
+          <button
+            onclick="downloadCV()"
+            class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center space-x-2"
+          >
+            <i data-feather="download" class="fa-solid text-cyan-400"></i>
+            <span>Unduh CV</span>
+          </button>
         </div>
-        <!-- Kiri: Teks -->
-        <div class="w-full lg:w-[60%] flex flex-col text-white">
-          <h2 class="p-1 text-xl font-medium text-primary">
-            👋 Hi, Saya Bagas Aditya Abimanyu
+
+        <!-- Mobile Hamburger Button -->
+        <button
+          onclick="toggleMobileMenu()"
+          class="md:hidden text-slate-300 hover:text-white p-2"
+        >
+          <i
+            id="menu-icon"
+            data-feather="menu"
+            class="fa-solid fa-bars text-xl"
+          ></i>
+        </button>
+      </div>
+
+      <!-- Mobile Drawer Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden glass-panel border-b border-slate-800 px-6 py-4 space-y-3"
+      >
+        <a
+          href="#about"
+          onclick="toggleMobileMenu()"
+          class="block text-slate-300 hover:text-cyan-400 py-1"
+          >Tentang</a
+        >
+        <a
+          href="#skills"
+          onclick="toggleMobileMenu()"
+          class="block text-slate-300 hover:text-cyan-400 py-1"
+          >Keterampilan</a
+        >
+        <a
+          href="#projects"
+          onclick="toggleMobileMenu()"
+          class="block text-slate-300 hover:text-cyan-400 py-1"
+          >Proyek</a
+        >
+        <a
+          href="#contact"
+          onclick="toggleMobileMenu()"
+          class="block text-slate-300 hover:text-cyan-400 py-1"
+          >Kontak</a
+        >
+        <button
+          onclick="
+            downloadCV();
+            toggleMobileMenu();
+          "
+          class="w-full mt-2 px-4 py-2.5 text-xs font-semibold rounded-lg bg-cyan-500 hover:bg-cyan-600 text-white transition flex items-center justify-center space-x-2"
+        >
+          <i class="fa-solid fa-download"></i>
+          <span>Unduh CV (PDF)</span>
+        </button>
+      </div>
+    </header>
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2 space-y-2">
+      <section
+        id="about"
+        class="md:pt-12 grid grid-cols-1 lg:grid-cols-12 gap-5 justify-center w-full items-center"
+      >
+        <div class="lg:col-span-7 space-y-1 text-left">
+          <div
+            class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-300 font-medium w-fit"
+          >
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            <span class="text-sky-400">
+              Terbuka untuk peluang kerja dan kolaborasi
+            </span>
+          </div>
+          <h2
+            class="p-1 lg:text-5xl text-4xl font-extrabold tracking-tight leading-tight text-white"
+          >
+            Hi, Saya Bagas Aditya Abimanyu
+            <span class="inline-block animate-bounce">👋</span>
           </h2>
 
-          <div class="p-1 text-3xl font-bold text-color-primary">
-            🧑‍💻 Front-End Web Developer
-            <!-- <span id="typewriter-text"></span><span class="cursor">|</span> -->
+          <div class="p-1 text-2xl font-bold text-color-primary">
+            <span class="text-sky-400">Front-End Web Developer</span>
+            <!-- <span class="text-sky-400" id="typewriter-text"></span> -->
+            <!-- <span class="cursor">|</span> -->
           </div>
 
           <h3 class="text-lg leading-relaxed text-balance">
-            🎓 Lulusan Teknik Informatika Universitas Pamulang dengan minat
-            besar di dunia pemrograman dan pengembangan aplikasi. <br /><br />
-            💼 Saat ini bekerja di industri restoran sambil fokus ngembangin
-            skill web development—terutama
-            <span class="font-semibold text-sky-300">Next.js</span>,
-            <span class="font-semibold text-sky-300">Laravel</span>,
-            <span class="font-semibold text-sky-300">Tailwind CSS</span>, dan
-            desain UI di <span class="font-semibold text-sky-300">Figma</span>.
-            <br /><br />
-            🚧 Sedang mengembangkan web restoran
-            <a
-              href="https://foodweb-bagas-adityas-projects.vercel.app/"
-              target="_blank"
-              class="underline text-sky-400 hover:text-sky-300"
-              >Ayam Bakar Lamongan Cak Di</a
-            >, serta memperdalam
-            <span class="font-semibold text-sky-300">Next.js</span>,
-            <span class="font-semibold text-sky-300"> Laravel API </span>
-            , dan
-            <span class="font-semibold text-sky-300"> Firebase. </span>
-            <br /><br />
-            🚀 Terbuka untuk kolaborasi dan siap berkembang di dunia digital.
+            Lulusan Teknik Informatika Universitas Pamulang dengan fokus pada
+            pengembangan antarmuka web modern yang responsif. Memiliki keahlian
+            kuat di bidang
+            <span class="font-semibold text-sky-400"
+              >Next.js, Laravel, Tailwind CSS, dan Figma.</span
+            >
+            <div
+              class="glass-panel p-4 my-4 rounded-xl border-l-4 border-sky-500 space-y-1 text-xs sm:text-sm"
+            >
+              <div
+                class="flex items-center space-x-1.5 font-semibold text-white"
+              >
+                <i
+                  data-feather="code"
+                  width="18"
+                  height="18"
+                  class="text-sky-400"
+                ></i>
+                <span>Proyek Saat Ini:</span>
+              </div>
+              <p class="text-base text-balance">
+                Mengembangkan platform web restoran
+                <a
+                  href="https://foodweb-golden.vercel.app/"
+                  class="text-sky-300 hover:text-sky-700 hover:underline font-medium"
+                  >Ayam Bakar Lamongan Cak Di</a
+                >
+                serta memperdalam arsitektur Next.js & REST API
+              </p>
+            </div>
           </h3>
 
-          <div class="flex flex-row items-center mt-6">
+          <div class="flex space-x-2 flex-row items-center">
+            <a
+              href="#contact"
+              class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5 flex items-center space-x-2"
+            >
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Hubungi Saya</span>
+            </a>
             <a
               href="https://www.instagram.com/desainsetengahjadi/"
-              class="p-1 mx-2 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md"
+              class="p-1 bg-cyan-500 hover:bg-pink-500 rounded-xl shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5"
             >
-              <i data-feather="instagram" width="33" height="33"></i>
+              <i
+                data-feather="instagram"
+                color="white"
+                width="30"
+                height="30"
+              ></i>
             </a>
             <a
               href="https://github.com/bagasadityaa/"
-              class="p-1 mx-2 hover:drop-shadow-lg hover:bg-slate-400 hover:rounded-md"
+              class="p-1 bg-cyan-500 hover:bg-black rounded-xl shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5"
             >
-              <i data-feather="github" width="33" height="33"></i>
+              <i data-feather="github" width="30" height="30"></i>
             </a>
           </div>
         </div>
+        <div class="flex justify-center">
+          <div class="relative group h-full w-full">
+            <div
+              class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-500"
+            ></div>
 
+            <div
+              class="relative glass-panel rounded-2xl p-6 border border-slate-800 text-center space-y-4"
+            >
+              <div
+                class="relative w-48 h-48 mx-auto rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl bg-slate-800"
+              >
+                <!-- Fallback Profile Image -->
+                <img
+                  src="images/profile.png"
+                  alt="Bagas Aditya Abimanyu"
+                  class="w-fit h-fit object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              <div class="space-y-1">
+                <h3 class="font-bold text-white text-lg">Bagas Aditya A.</h3>
+                <p class="text-xs text-slate-400">
+                  Tangerang / Jakarta, Indonesia
+                </p>
+              </div>
+
+              <!-- Mini Badges Grid -->
+              <div
+                class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800 text-center text-xs"
+              >
+                <div class="p-2 rounded-lg bg-slate-800/60">
+                  <span class="block font-bold text-cyan-400">Teknik</span>
+                  <span class="text-[10px] text-slate-400">Informatika</span>
+                </div>
+                <div class="p-2 rounded-lg bg-slate-800/60">
+                  <span class="block font-bold text-cyan-400">5+</span>
+                  <span class="text-[10px] text-slate-400">Web App</span>
+                </div>
+                <div class="p-2 rounded-lg bg-slate-800/60">
+                  <span class="block font-bold text-emerald-400">Siap</span>
+                  <span class="text-[10px] text-slate-400">Kerja</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- Kanan: Gambar -->
       </section>
 
@@ -156,7 +333,7 @@
           </div>
         </div>
       </section>
-    </div>
+    </main>
   </body>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

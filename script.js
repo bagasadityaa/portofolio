@@ -117,7 +117,16 @@ function type() {
   }
 }
 document.addEventListener("DOMContentLoaded", type);
-
+function toggleMobileMenu() {
+  const menu = document.getElementById("mobile-menu");
+  const icon = document.getElementById("menu-icon");
+  menu.classList.toggle("hidden");
+  if (menu.classList.contains("hidden")) {
+    icon.className = "fa-solid fa-bars text-xl";
+  } else {
+    icon.className = "fa-solid fa-xmark text-xl";
+  }
+}
 // percobaan
 const name = "Bagas Aditya Abimanyu";
 function typewriter() {
