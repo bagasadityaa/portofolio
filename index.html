@@ -61,68 +61,68 @@
     <title>Portofolio | Bagus Aditya Abimanyu</title>
   </head>
   <body
-    class="bg-sky-950 text-slate-200 min-h-screen overflow-x-hidden selection:bg-cyan-500 selection:text-white relative w-full font-poppins"
+    class="relative w-full min-h-screen overflow-x-hidden bg-sky-950 text-slate-200 selection:bg-cyan-500 selection:text-white font-poppins"
   >
     <!-- Home -->
     <div
-      class="fixed top-0 left-1/4 w-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
+      class="fixed top-0 rounded-full pointer-events-none left-1/4 w-96 bg-cyan-500/10 blur-3xl"
     ></div>
     <div
-      class="fixed bottom-10 right-10 w-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"
+      class="fixed rounded-full pointer-events-none bottom-10 right-10 w-96 bg-blue-600/10 blur-3xl"
     ></div>
     <header
-      class="sticky top-0 z-40 w-full glass-panel border-b border-slate-800/80"
+      class="sticky top-0 z-40 w-full border-b glass-panel border-slate-800/80"
     >
       <div
-        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between"
+        class="flex items-center justify-between h-20 max-w-6xl px-4 mx-auto sm:px-6 lg:px-8"
       >
         <!-- Logo -->
         <a href="/" class="flex items-center space-x-3 group">
           <div
-            class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-500 flex items-center justify-center font-bold text-white shadow-lg group-hover:scale-105 transition-transform"
+            class="flex items-center justify-center w-10 h-10 font-bold text-white transition-transform shadow-lg rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-500 group-hover:scale-105"
           >
             BA
           </div>
           <div>
             <span
-              class="font-bold text-lg text-white tracking-tight block leading-tight"
+              class="block text-lg font-bold leading-tight tracking-tight text-white"
               >Bagas Aditya</span
             >
-            <span class="text-xs text-cyan-400 font-medium tracking-wide"
+            <span class="text-xs font-medium tracking-wide text-cyan-400"
               >Web Developer</span
             >
           </div>
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <nav class="items-center hidden space-x-8 text-sm font-medium md:flex">
           <a
             href="#about"
-            class="text-slate-300 hover:text-cyan-400 transition-colors"
+            class="transition-colors text-slate-300 hover:text-cyan-400"
             >Tentang</a
           >
           <a
             href="#skills"
-            class="text-slate-300 hover:text-cyan-400 transition-colors"
+            class="transition-colors text-slate-300 hover:text-cyan-400"
             >Keterampilan</a
           >
           <a
             href="#projects"
-            class="text-slate-300 hover:text-cyan-400 transition-colors"
+            class="transition-colors text-slate-300 hover:text-cyan-400"
             >Proyek</a
           >
           <a
             href="#contact"
-            class="text-slate-300 hover:text-cyan-400 transition-colors"
+            class="transition-colors text-slate-300 hover:text-cyan-400"
             >Kontak</a
           >
         </nav>
 
         <!-- CTA Header Button -->
-        <div class="hidden md:flex items-center space-x-3">
+        <div class="items-center hidden space-x-3 md:flex">
           <button
             onclick="downloadCV()"
-            class="px-4 py-2 text-xs font-semibold rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 transition flex items-center space-x-2"
+            class="flex items-center px-4 py-2 space-x-2 text-xs font-semibold transition border rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700"
           >
             <i data-feather="download" class="fa-solid text-cyan-400"></i>
             <span>Unduh CV</span>
@@ -132,12 +132,12 @@
         <!-- Mobile Hamburger Button -->
         <button
           onclick="toggleMobileMenu()"
-          class="md:hidden text-slate-300 hover:text-white p-2"
+          class="p-2 md:hidden text-slate-300 hover:text-white"
         >
           <i
             id="menu-icon"
             data-feather="menu"
-            class="fa-solid fa-bars text-xl"
+            class="text-xl fa-solid fa-bars"
           ></i>
         </button>
       </div>
@@ -145,30 +145,30 @@
       <!-- Mobile Drawer Menu -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden glass-panel border-b border-slate-800 px-6 py-4 space-y-3"
+        class="hidden px-6 py-4 space-y-3 border-b md:hidden glass-panel border-slate-800"
       >
         <a
           href="#about"
           onclick="toggleMobileMenu()"
-          class="block text-slate-300 hover:text-cyan-400 py-1"
+          class="block py-1 text-slate-300 hover:text-cyan-400"
           >Tentang</a
         >
         <a
           href="#skills"
           onclick="toggleMobileMenu()"
-          class="block text-slate-300 hover:text-cyan-400 py-1"
+          class="block py-1 text-slate-300 hover:text-cyan-400"
           >Keterampilan</a
         >
         <a
           href="#projects"
           onclick="toggleMobileMenu()"
-          class="block text-slate-300 hover:text-cyan-400 py-1"
+          class="block py-1 text-slate-300 hover:text-cyan-400"
           >Proyek</a
         >
         <a
           href="#contact"
           onclick="toggleMobileMenu()"
-          class="block text-slate-300 hover:text-cyan-400 py-1"
+          class="block py-1 text-slate-300 hover:text-cyan-400"
           >Kontak</a
         >
         <button
@@ -183,12 +183,12 @@
         </button>
       </div>
     </header>
-    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-2 space-y-2">
+    <main class="max-w-6xl px-4 py-2 mx-auto space-y-2 sm:px-6 lg:px-8">
       <section
         id="about"
-        class="my-2 lg:my-32 gap-5 flex-col lg:flex-row flex w-full items-center"
+        class="flex flex-col items-center w-full gap-5 my-2 lg:h-screen lg:flex-row"
       >
-        <div class="lg:col-span-7 space-y-1 text-left">
+        <div class="space-y-1 text-left lg:col-span-7">
           <div
             class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-300 font-medium w-fit"
           >
@@ -198,7 +198,7 @@
             </span>
           </div>
           <h2
-            class="p-1 lg:text-5xl text-4xl font-extrabold tracking-tight leading-tight text-white"
+            class="p-1 text-4xl font-extrabold leading-tight tracking-tight text-white lg:text-5xl"
           >
             Hi, Saya Bagas Aditya Abimanyu
             <span class="inline-block animate-bounce">👋</span>
@@ -218,7 +218,7 @@
               >Next.js, Laravel, Tailwind CSS, dan Figma.</span
             >
             <div
-              class="glass-panel p-4 my-4 rounded-xl border-l-4 border-sky-500 space-y-1 text-xs sm:text-sm"
+              class="p-4 my-4 space-y-1 text-xs border-l-4 glass-panel rounded-xl border-sky-500 sm:text-sm"
             >
               <div
                 class="flex items-center space-x-1.5 font-semibold text-white"
@@ -235,7 +235,7 @@
                 Mengembangkan platform web restoran
                 <a
                   href="https://foodweb-golden.vercel.app/"
-                  class="text-sky-300 hover:text-sky-700 hover:underline font-medium"
+                  class="font-medium text-sky-300 hover:text-sky-700 hover:underline"
                   >Ayam Bakar Lamongan Cak Di</a
                 >
                 serta memperdalam arsitektur Next.js & REST API
@@ -243,7 +243,7 @@
             </div>
           </h3>
 
-          <div class="flex space-x-2 flex-row items-center">
+          <div class="flex flex-row items-center space-x-2">
             <a
               href="#contact"
               class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5 flex items-center space-x-2"
@@ -270,33 +270,37 @@
             </a>
           </div>
         </div>
-        <!-- card -->
-        <div class="flex items-center justify-center w-full">
-          <div class="relative group justify-center h-full w-full">
+        <div class="flex justify-center w-full h-full lg:col-span-5">
+          <div class="relative flex items-center w-full max-w-sm mx-auto group">
+            <!-- Glow behind profile: Cukup pakai -inset-1 (tanpa w-full & h-2/3) -->
             <div
-              class="relative glass-panel hover:shadow-sky-400 hover:bg-sky-500 item w-full flex flex-col justify-center p-4 flex-1 rounded-2xl border border-slate-800 text-center space-y-4"
+              class="absolute w-full transition duration-500 h-3/4 -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-3xl blur-lg opacity-30 group-hover:opacity-60"
+            ></div>
+
+            <!-- Card Utama: Hapus h-2/3 agar tinggi kartu pas mengikuti isi konten -->
+            <div
+              class="relative flex flex-col items-center w-full p-6 space-y-4 text-center border glass-panel rounded-2xl border-slate-800 bg-slate-900/90"
             >
-              <!-- Cukup tambahkan mx-auto di div gambar -->
               <div
-                class="relative w-3/4 mx-auto rounded-2xl overflow-hidden border-2 border-cyan-500/30 shadow-2xl bg-slate-800"
+                class="relative w-3/4 mx-auto overflow-hidden border-2 shadow-2xl rounded-2xl border-cyan-500/30 bg-slate-800"
               >
                 <img
                   src="images/profile.png"
                   alt="Bagas Aditya Abimanyu"
-                  class="w-full h-[350px] object-top object-cover justify-center"
+                  class="object-cover object-top w-full transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
 
               <div class="space-y-1">
-                <h3 class="font-bold text-white text-lg">Bagas Aditya A.</h3>
+                <h3 class="text-lg font-bold text-white">Bagas Aditya A.</h3>
                 <p class="text-xs text-slate-400">
-                  📍Tangerang Selatan, Indonesia
+                  Tangerang / Jakarta, Indonesia
                 </p>
               </div>
 
               <!-- Mini Badges Grid -->
               <div
-                class="grid grid-cols-3 gap-2 pt-2 border-t border-slate-800 text-center text-xs"
+                class="grid w-full grid-cols-3 gap-2 pt-2 text-xs text-center border-t border-slate-800"
               >
                 <div class="p-2 rounded-lg bg-slate-800/60">
                   <span class="block font-bold text-cyan-400">Teknik</span>
@@ -314,7 +318,6 @@
             </div>
           </div>
         </div>
-        <!-- Kanan: Gambar -->
       </section>
 
       <!-- Project -->
